@@ -4,9 +4,10 @@ from django.conf.urls.defaults import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
+from web import views
+
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'src.views.home', name='home'),
+    url(r'^$', views.IndexView.as_view(), name='home'),
     # url(r'^src/', include('src.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

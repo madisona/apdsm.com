@@ -1,5 +1,6 @@
 
 Django
+django-debug-toolbar
 
 django-contact-form-gv
 djbootstrap
