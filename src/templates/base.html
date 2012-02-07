@@ -58,14 +58,9 @@
   <body>
     {% block top_nav %}{% include "top_nav.html" %}{% endblock %}
     <div class="container">
+      {%  block notification_center %}{% include "djbootstrap/notification_center.html" %}{% endblock %}
       {% block body_content %}
-
         <div class="content">
-          <div class="page-header">
-            <h1>{% block page_name %}Page name{% endblock %}</h1>
-            <h2><small>{% block page_tagline %}{% endblock %}</small></h2>
-          </div>
-          {%  block notification_center %}{% include "djbootstrap/notification_center.html" %}{% endblock %}
           {% block content %}
           <div class="row">
             <div class="span9">

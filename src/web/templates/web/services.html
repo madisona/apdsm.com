@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Services Offered{% endblock %}
+
+{% block meta_description %}AssistantPro Transaction coordinators offer you a variety of services coordinating all the details between offer and close.{% endblock %}
+
+{% block page_name %}Services Offered{% endblock %}
+{% block page_tagline %}Helping you close{% endblock %}
+
+{% block css %}{{ block.super }}
+  .subnav .nav > li > a {
+  margin: 0;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-left: 1px solid whiteSmoke;
+  border-right: 1px solid #E5E5E5;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  }
+{% endblock %}
+
+{% block content %}
+  <header class="jumbotron">
+    <p class="lead">
+      <strong>AssistantPro</strong> Transaction coordinators offer you a variety of services coordinating all the details between offer and close.
+    </p>
+    
+    <div class="subnav">
+      <ul class="nav nav-pills">
+        <li><a href="#communication">Communication</a></li>
+        <li><a href="#abstracts">Abstracts</a></li>
+        <li><a href="#loan_process">Loan</a></li>
+        <li><a href="#appraisals">Appraisals</a></li>
+        <li><a href="#termite_inspections">Termite Inspections</a></li>
+        <li><a href="#home_warranties">Home Warranties</a></li>
+        <li><a href="#title_opinions">Title Opinions</a></li>
+        <li><a href="#closing_documents">Closing</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="summary">
+    <h2>Summary of Services</h2>
+    <p><strong>AssistantPro</strong> Transaction coordinators offer you a variety of services coordinating all the details between offer and close.</p>
+    <ol>
+      {% include "web/services_list.html" %}
+    </ol>
+  </section>
+
+  <section id="communication">
+    <h2>Communication and Documentation</h2>
+    <p>The contracted agent will be responsible for initially explaining to the buyers, or sellers of the <strong>AssistantPro</strong> Coordinator's working arrangement with them.  <strong>AssistantPro</strong> Coordinator will provide business cards to the agent to be given out to the buyers, sellers and lenders.</p>
+    <p>When the sale takes place, the <strong>AssistantPro</strong> coordinator will send out a Letter of Introduction.</p>
+  </section>
+  
+  <section id="abstracts">
+    <h2>Abstracts</h2>
+    <p><strong>AssistantPro</strong> Coordinator will help locate the abstract and have it sent to the abstract company of choice. If the agent obtains the abstract at the time of the listing or any time before the home sells, they should give the abstract to the <strong>AssistantPro</strong> Coordinator to send to the abstract company with instructions to hold for orders.</p>
+  </section>
+  
+  <section id="loan_process">
+    <h2>Loan Process</h2>
+    <p><strong>AssistantPro</strong> Coordinator will contact the Loan Officer to track the progress of the loan and secure written commitment on or before the committed date reflected on the purchase agreement.  In the event the loan is denied for any reason, <strong>AssistantPro</strong> Coordinator will contact the contracted agent and the agent will proceed.</p>
+  </section>
+  
+  <section id="appraisals">
+    <h2>Appriasals</h2>
+    <p><strong>AssistantPro</strong> Coordinator will schedule and track the appraisal process and report to the contracted agent of any work required.  The agent will handle any oral or written communication with the buyer, seller, or selling agent involving any negotiations of the work requirements.</p>
+  </section>
+
+  <section id="termite_inspections">
+    <h2>Termite Inspections</h2>
+    <p><strong>AssistantPro</strong> Coordinator, when applicable, may order and schedule termite inspections.  Any termite problems will be referred to the contracted agent.</p>
+  </section>
+
+  <section id="home_warranties">
+    <h2>Home Warranties</h2>
+    <p>It is the responsibility of the <strong>AssistantPro</strong> Coordinator to call or email for the placement of the home warranty when applicable.  A<strong>AssistantPro</strong> Coordinator will notify the lender of the confirmation number and deliver to the lender a copy of the bill.</p>
+  </section>
+
+  <section id="title_opinions">
+    <h2>Title Opinions</h2>
+    <p><strong>AssistantPro</strong> Coordinator will assist the closing department to complete the documents needed to satisfy objections on the title opinion.  <strong>AssistantPro</strong> Coordinator will work directly with the buyers, sellers or agents for the purpose of collecting information and communicating the same to the closing department.  If there are any irreconcilable problems, <strong>AssistantPro</strong> Coordinator will deliver a copy of the title opinion to the contracted agent so a decision on how to proceed can be made.</p>
+  </section>
+
+  <section id="closing_documents">
+    <h2>Closing Documents</h2>
+    <p>When the documents are completed, <strong>AssistantPro</strong> Coordinator will deliver them to the lender or closing department or agent, as required.  The <strong>AssistantPro</strong> Coordinator will obtain the HUD Settlement statement as quickly as possible for the contracted agent and buyer or seller to review.</p>
+  </section>
+
+  <section id="closing_day">
+    <h2>Closing Day</h2>
+    <p>When proceeds and commission checks are ready, and if the transaction is the contracted agents listing, <strong>AssistantPro</strong> Coordinator will pick up the seller’s proceeds and commission check to be delivered to the appropriate places.</p>
+  </section>
+{% endblock %}
