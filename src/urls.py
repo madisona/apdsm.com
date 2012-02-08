@@ -13,6 +13,9 @@ urlpatterns = patterns('',
     url(r'^services/$', TemplateView.as_view(template_name="web/services.html"), name='services'),
     url(r'^rates/$', TemplateView.as_view(template_name="web/rates.html"), name='rates'),
     url(r'^contact/$', views.Contact.as_view(), name='contact'),
+    url(r'^sitemap.xml$', views.Sitemap.as_view(), name="sitemap"),
+    url(r'^robots.txt$', views.Robots.as_view(), name="robots"),
+
     # url(r'^src/', include('src.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -20,3 +20,20 @@ class Contact(ContactFormView):
 
     def get_success_url(self):
         return self.request.path
+
+
+class Sitemap(TemplateView):
+    template_name = "web/sitemap.xml"
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context, content_type='text/xml')
+
+
+class Robots(TemplateView):
+    template_name = "web/robots.txt"
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context, content_type='text/plain')
+
