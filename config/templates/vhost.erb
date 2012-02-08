@@ -1,0 +1,20 @@
+<VirtualHost *:80>
+    ServerAdmin aaron.l.madison@gmail.com
+    DocumentRoot /var/www/<%= website_host %>/current/web/
+    ServerName <%= website_host %>
+    ErrorLog  /var/www/<%= website_host %>/shared/log/<%= website_host %>-error_log
+    CustomLog /var/www/<%= website_host %>/shared/log/<%= website_host %>-access_log common
+
+    WSGIDaemonProcess <%= website_host %> processes=1 python-path=/var/www/<%= website_host %>/current/<%= virtualenv_name %>/lib/python2.6/site-packages
+    WSGIProcessGroup <%= website_host %>
+
+    Alias /static/ /var/www/<%= website_host %>/current/web/static/
+    WSGIScriptAlias / /var/www/<%= website_host %>/current/web/django.wsgi
+	
+    <Directory /var/www/<%= website_host %>/current/web/static>
+      Options FollowSymLinks MultiViews
+      AllowOverride None
+      Order allow,deny
+      allow from all
+    </Directory>
+</VirtualHost>
