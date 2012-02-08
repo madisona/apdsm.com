@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name="web/index.html"), name='home'),
     url(r'^services/$', TemplateView.as_view(template_name="web/services.html"), name='services'),
     url(r'^rates/$', TemplateView.as_view(template_name="web/rates.html"), name='rates'),
+    url(r'^contact/$', views.Contact.as_view(), name='contact'),
     # url(r'^src/', include('src.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

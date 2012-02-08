@@ -18,3 +18,8 @@ class AcceptanceTests(test.TestCase):
         response = self.client.get(reverse("rates"))
         self.assertEqual(200, response.status_code)
         self.assertTemplateUsed(response, "web/rates.html")
+
+    def test_hits_contact_page(self):
+        response = self.client.get(reverse("contact"))
+        self.assertEqual(200, response.status_code)
+        self.assertTemplateUsed(response, "web/contact.html")

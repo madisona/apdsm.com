@@ -2,6 +2,7 @@
 {% url home as home_url %}
 {% url services as services_url %}
 {% url rates as rates_url %}
+{% url contact as contact_url %}
 
 {% spaceless %}
 <div class="navbar navbar-fixed-top">
@@ -13,7 +14,7 @@
         <li class="{% activate services_url %}"><a href="{{ services_url }}">Services</a></li>
         <li class="{% activate rates_url %}"><a href="{{ rates_url }}">Rates</a></li>
         <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="{% activate contact_url %}"><a href="{{ contact_url }}">Contact</a></li>
       </ul>
     </div>
   </div>

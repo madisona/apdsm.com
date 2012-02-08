@@ -10,10 +10,8 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     ("Aaron Madison", "aaron.l.madison@gmail.com"),
 )
+MANAGERS = ADMINS
 
-MANAGERS = (
-    ('Linda Vernon', 'linda.vernon@assistantproiowa.com'),
-)
 
 DATABASES = {
     'default': {
@@ -65,7 +63,7 @@ ROOT_URLCONF = 'src.urls'
 
 TEMPLATE_DIRS = (
     join(PROJECT_DIR, 'templates'),
-    )
+)
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
@@ -92,6 +90,10 @@ INSTALLED_APPS = (
 )
 
 INTERNAL_IPS = ('127.0.0.1',)
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error.

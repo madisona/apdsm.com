@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+{% block meta_description %}AssistantPro would love to hear from you. Contact us and we'll get back to you as soon as possible.{% endblock %}
+
+{% block content %}
+  <header>
+    <p class="lead">
+      Please fill out the form below and we'll get back to you as soon as possible.
+    </p>
+  </header>
+
+  <div class="row">
+    <div class="span6">
+      <section id="contact-form">
+        <form action="" method="post">{% csrf_token %}
+          {% include "djbootstrap/bootstrapped_form.html" %}
+          <div class="controls">
+            <input type="submit" class="btn btn-primary" value="Contact Us" />
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="span4">
+      <p>Or, contact us by phone or mail.</p>
+      <address>
+        <strong>AssistantPro, LLC.</strong><br />
+        606 1st Ave. South<br />
+        Altoona, IA 50009-1715<br />
+
+        Phone: 515.770.7382<br />
+        Fax: 515.412.1106<br />
+      </address>
+    </div>
+  </div>
+
+{% endblock %}
