@@ -4,8 +4,8 @@ set :repository,  "git@bitbucket.org:amadison/www.assistantproiowa.com.git"
 set :scm, :git
 
 ssh_options[:keys] = [File.join(ENV["HOME"], "ec2", "amadison-west.pem")]
-role :web, "ec2-50-112-52-176.us-west-2.compute.amazonaws.com"                          # Your HTTP server, Apache/etc
-role :app, "ec2-50-112-52-176.us-west-2.compute.amazonaws.com"
+role :web, "50.112.105.95"                          # Your HTTP server, Apache/etc
+role :app, "50.112.105.95"
 #role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
@@ -21,7 +21,6 @@ set :use_sudo, false
 after 'deploy:update_code', :prepare_virtualenv
 after :prepare_virtualenv, :prepare_django
 after :prepare_django, :upload_vhost
-after 'deploy:symlink', :restart_apache
 
 
 # override to remove some Rails specific stuff
@@ -29,6 +28,11 @@ namespace :deploy do
     task :finalize_update, :except => { :no_release => true } do
         run "chmod -R g+w #{latest_release}" if fetch(:group_writable, true)
     end
+    
+    desc "Restarts Apache after successful deploy"
+    task :restart, :roles => :app, :except => { :no_release => true } do
+        run "sudo httpd -k graceful"
+    end    
 end
 
 def run_in_virtualenv(command)
@@ -78,10 +82,4 @@ task :upload_vhost do
     result = template.result(binding)
     
     put(result, "/etc/httpd/sites-enabled/#{website_host}")
-end
-    
-
-desc "Restarts apache"
-task :restart_apache do
-    run "sudo httpd -k graceful"
 end
