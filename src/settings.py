@@ -19,9 +19,10 @@ ADMINS = (
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': join(PROJECT_DIR, 'local.db'),
-        }
+        'ENGINE': 'google.appengine.ext.django.backends.rdbms',
+        'INSTANCE': 'twomadisons.com:tc-assistantpro:assistantpro',
+        'NAME': 'assistantpro_txn',
+    }
 }
 
 if (os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine') or
