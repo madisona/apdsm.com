@@ -19,16 +19,15 @@ ADMINS = (
 
 DATABASES = {
     'default': {
-        'ENGINE': 'google.appengine.ext.django.backends.rdbms',
-        'INSTANCE': 'twomadisons.com:tc-assistantpro:assistantpro',
-        'NAME': 'assistantpro_web',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': join(PROJECT_DIR, 'local.db'),
         }
 }
 
 if (os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine') or
     os.getenv('SETTINGS_MODE') == 'prod'):
     # Running on production App Engine, so use a Google Cloud SQL database.
-    DEBUG = True
+    DEBUG = False
     MANAGERS = (
         ('Linda Vernon', 'linda.vernon@assistantproiowa.com'),
     )
