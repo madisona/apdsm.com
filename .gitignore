@@ -2,6 +2,10 @@
 *.pyc
 *.pyo
 
+# don't include project dependencies
+src/lib/*
+src/production_static/*
+
 .idea/*
 local.db
 .DS_Store
