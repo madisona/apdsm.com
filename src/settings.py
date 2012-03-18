@@ -30,7 +30,7 @@ if (os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine') or
     # Running on production App Engine, so use a Google Cloud SQL database.
     DEBUG = False
     MANAGERS = (
-        ('Linda Vernon', 'linda.vernon@assistantproiowa.com'),
+        ('Linda Ruppert', 'linda.ruppert@assistantproiowa.com'),
     )
     EMAIL_BACKEND = 'djangoappengine.mail.AsyncEmailBackend'
 
