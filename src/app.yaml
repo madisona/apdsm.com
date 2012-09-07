@@ -1,4 +1,4 @@
-application: assistantpro-web
+application: aproiowa
 version: 1-002
 runtime: python27
 api_version: 1
