@@ -1,6 +1,6 @@
 
-Django
+Django<1.6
 django-debug-toolbar
 
-django-contact-form-gv
-djbootstrap
+django-contact-form-gv==0.4.2
+djbootstrap==2.3.2
