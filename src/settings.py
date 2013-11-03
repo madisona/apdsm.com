@@ -7,6 +7,7 @@
 import os, sys
 from os.path import abspath, dirname, join
 
+ALLOWED_HOSTS = [".apdsm.com", ".aproiowa.com", ".aproiowa.appspot.com"]
 PROJECT_DIR = abspath(dirname(__file__))
 
 LIB_DIR = join(PROJECT_DIR, 'lib')
