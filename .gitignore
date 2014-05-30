@@ -9,3 +9,5 @@ src/production_static/*
 .idea/*
 local.db
 .DS_Store
+
+_site

@@ -1,0 +1,208 @@
+@charset "utf-8";
+@import "../bootstrap/bootstrap";
+
+
+@accent-color-one: #3399cc;
+@white: #fff;
+@navbar-color: #eeeded;
+@footer-color: #efefee;
+@gradient-start-color: #c4d6e5;
+@gradient-end-color: #fff;
+
+/**--------Default Styles----------**/
+body { font-size:14px; background-color:@footer-color;}
+.container { /*background-color:@white;*/}
+.page-container { background-color:@white; padding-bottom:20px;}
+
+h2 { font-size:1.2em; font-weight:bold; color:@accent-color-one;}
+h3 { font-size:1.15em; font-weight:bold; color:@gray-light;}
+
+.mobile-nav {
+  .container;
+  .visible-xs;
+}
+.desktop-nav {
+  .hidden-xs;
+}
+
+.row.head {margin-bottom:10px; padding:25px 0 10px 0;}
+.logo { text-align: center; width:300px;}
+.logo img { width:100%;}
+
+
+/*top navigation styles----------------------*/
+.topnav { float:right; font-size:12px;}
+.topnav nav a { border:1px solid @navbar-color; margin-right:10px; background-color:@navbar-color; }
+
+.desktop-nav ul {float: right;}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 7px 15px;
+}
+
+.topnav li.active a { background-color:@accent-color-one;}
+.topnav li a:hover {background-color:@accent-color-one; color:@white;}
+
+
+
+.navbar-toggle.menu { background-color:@accent-color-one; padding: 6px 12px; color:@white; font-weight:bold;}
+.navbar-header {background-color:@navbar-color;}
+ul.nav.navbar-nav {margin-top:0;}
+ul.nav.navbar-nav li {border-bottom:1px solid @navbar-color;}
+
+.tertiary {
+  text-align:right;
+  margin-bottom:20px;
+  font-size:1.2em;
+  font-weight: bold;
+  margin-right:10px;
+  .hidden-xs;
+}
+.tertiary a {text-decoration:underline;}
+
+
+
+
+.row.banner {}
+.row.banner img {border:1px solid #000;}
+
+.interior-divider {
+  height: 12px;
+  background-color: @accent-color-one;
+
+}
+.interior-wrapper {
+  &:extend(.row all);
+}
+.interior-sidebar {
+  .make-sm-column(4);
+}
+.interior-content {
+  .make-sm-column(8);
+}
+.interior-full-width {
+  .make-xs-column(12);
+}
+
+.interior-wrapper { padding-top:20px;  background: rgba(255, 255, 255, 0.3); border-radius:4px;}
+.interior-wrapper h2 {margin-top:0;}
+.interior-wrapper h1 {
+  font-size:1.4em;
+  font-weight:bold;
+  margin-top:0;
+  color:#428bca;
+  padding-bottom:5px;
+  margin-bottom:15px;
+}
+img.rounded { border-radius:4px;}
+
+.titlebar { background-color:#428bca; margin-bottom:15px;}
+.titlebar h1 {color:#fff; font-size:1.3em; font-weight:bold; margin:10px 0; padding-left:15px;}
+
+#placeholder {padding-bottom:10px;}
+
+.interior_banner { margin-bottom:15px; border:1px solid #000;}
+.features {
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom:20px; background: #eeeded; border-radius:4px; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top, #eeeded 0%, #ffffff 33%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeded), color-stop(33%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #eeeded 0%,#ffffff 33%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eeeded 0%,#ffffff 33%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #eeeded 0%,#ffffff 33%); /* IE10+ */
+  background: linear-gradient(to bottom, #eeeded 0%,#ffffff 33%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeded', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */}
+.feature {padding-bottom:10px;}
+.feature h3 {font-size:1.1em; font-weight:bold; color:gray; margin-bottom:5px;}
+
+
+.footer-wrap {border-top:1px solid @accent-color-one; padding:15px 0; background-color:@footer-color;}
+.row.footer { }
+.row.footer p { margin-bottom:3px;}
+.row.footer span {padding:0px 3px; white-space:nowrap;}
+.footer-container {
+  &:extend(.container all);
+  background-color:transparent;
+}
+.footer-content {
+  .make-sm-column(10);
+}
+
+.footer-social {
+  .make-sm-column(2);
+  text-align:left;
+  padding-top:15px;
+}
+
+
+.photo_wrap {width:100%; padding:10px 0; background-color:@accent-color-one;}
+.photo_wrap .banner img {border-top:1px solid @white; border-bottom:1px solid @white; border-left:none; border-right:none;}
+
+
+// Testimonials
+.testimonial {font-size: .9em; font-style: italic;}
+.testimonial-name {font-weight: bold;}
+.testimonial-company {font-size: 12px;}
+
+
+@media (max-width: @screen-md-min) {}
+
+
+/**--------Large Display----------**/
+@media (min-width: @screen-lg-min) {}
+
+
+/**--------Portrait Tablet----------**/
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {}
+
+
+/**--------Tablet and up----------**/
+@media (min-width: @screen-sm-min) {
+  .features {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .footer-social {
+    text-align:right;
+  }
+  .logo {float: left;}
+
+  // Services
+  .affix {
+    top: 20px;
+  }
+  .interior-sidebar.affix {
+    position: fixed;
+  }
+}
+
+/**----------Large Phones-------------**/
+@media (max-width: @screen-sm-max) {
+  .row.head {padding-top:15px;}
+
+  ul.nav.navbar-nav a:hover {background-color:@accent-color-one; color:@white;}
+  ul.nav.navbar-nav li.active a {background-color:@accent-color-one; color:@white;}
+
+}
+
+
+/**--------Small Phones----------**/
+@media (max-width: 350px) {
+  .logo { float:none; width:100%; margin-bottom:0px;}
+  .navbar-brand { font-size:1.2em;}
+  .row.banner {display:none;}
+  .row.head {margin-bottom:0; padding:15px 0 0 0;}
+  .photo_wrap {display:none;}
+}
+
+
+//BS3 Makes it so each control needs a form-control class... This overrides that.
+input, textarea, select {
+  &:extend(.form-control all);
+}
+label {font-weight: normal;}

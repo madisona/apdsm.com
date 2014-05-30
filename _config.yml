@@ -1,0 +1,9 @@
+name: My Mutual Insurance Company
+markdown: redcarpet
+pygments: true
+permalink: pretty
+baseurl: ""
+
+exclude: [compile_css.sh, README.rst]
+
+mobile_company_name: apdsm.com

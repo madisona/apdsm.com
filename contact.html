@@ -1,0 +1,95 @@
+---
+layout: theme1
+title: Contact Us | AssistantPro, LLC.
+page-title: Contact Us
+active: contact
+
+form_confirmation_url: /contact_confirmation
+---
+
+<div class="interior-divider"></div>
+
+
+<div class="interior-wrapper">
+    <div class="interior-content">
+        <h1>{{ page.page-title }}</h1>
+        <!--<iframe src="https://docs.google.com/forms/d/1xL_zOlXUIiXBhAhh2nxvaXah7SsGrGCk5U13Xcn-ev8/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe"
+                style="display:none;" onload="if(submitted)
+                {window.location='{{ page.form_confirmation_url }}';}"></iframe>
+        <form action="https://docs.google.com/a/aproiowa.com/forms/d/1xL_zOlXUIiXBhAhh2nxvaXah7SsGrGCk5U13Xcn-ev8/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+            <ol role="list" class="ss-question-list" style="padding-left: 0">
+                <fieldset class="form-group">
+                <div class="ss-form-question errorbox-good" role="listitem">
+                <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+                    <label class="ss-q-item-label" for="entry_1820353552"><div class="ss-q-title"><strong>Name</strong>
+                        <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+                        <span class="ss-required-asterisk">*</span></div>
+                        <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+                    <input type="text" name="entry.1820353552" value="" class="ss-q-short" id="entry_1820353552" dir="auto" aria-label="Name  " aria-required="true" required="" title="">
+                    <div class="error-message"></div>
+
+                </div></div></div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="ss-form-question errorbox-good" role="listitem">
+                    <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+                        <label class="ss-q-item-label" for="entry_1526995512"><div class="ss-q-title"><strong>Email</strong>
+                            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+                            <span class="ss-required-asterisk">*</span></div>
+                            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+                        <input type="email" name="entry.1526995512" value="" class="ss-q-short" id="entry_1526995512" dir="auto" aria-label="Email  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
+                        <div class="error-message">Must be a valid email address</div>
+
+                    </div></div></div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="ss-form-question errorbox-good" role="listitem">
+                    <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+                        <label class="ss-q-item-label" for="entry_126465174"><div class="ss-q-title">Phone
+                        </div>
+                            <div class="ss-q-help ss-secondary-text help-block" dir="ltr">Enter phone number in xxx-xxx-xxxx format.</div></label>
+                        <input type="text" name="entry.126465174" value="" class="ss-q-short" id="entry_126465174" dir="auto" aria-label="Phone Enter phone number in xxx-xxx-xxxx format. " title="">
+                        <div class="error-message"></div>
+
+                    </div></div></div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="ss-form-question errorbox-good" role="listitem">
+                    <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+                        <label class="ss-q-item-label" for="entry_494541918"><div class="ss-q-title"><strong>Message</strong>
+                            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+                            <span class="ss-required-asterisk">*</span></div>
+                            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+                        <textarea name="entry.494541918" rows="5" cols="0" class="ss-q-long form-control" id="entry_494541918" dir="auto" aria-label="Message  Must be at least 0 characters." aria-required="true" required=""></textarea>
+
+
+                    </div></div></div>
+                </fieldset>
+            <input type="hidden" name="draftResponse" value="[,,&quot;1776114898313406401&quot;]">
+            <input type="hidden" name="pageHistory" value="0">
+            <input type="hidden" name="fbzx" value="1776114898313406401">
+            <input type="submit" name="submit" value="Submit" id="ss-submit" class="btn btn-primary">
+
+
+            </ol></form>
+    </div>
+    <div class="interior-sidebar">
+        <div class="feature">
+            <img src="{{ site.baseurl }}/img/linda.jpg" alt="Linda Ruppert" class="rounded" style="margin-bottom: 9px;" />
+            <h2>AssistantPro, LLC.</h2>
+            <div class="address">
+                6804 Forest Ct.<br />
+                Windsor Heights, IA 50324<br /><br />
+                Phone: <a href="tel:5157707382">(515) 770-7382</a><br />
+                Fax: 515.412.1106
+            </div>
+
+        <div class="feature">
+
+        </div>
+    </div>
+</div><!--end of row interior_content-->
+</div><!--end of row interior_wrapper-->
+<script type='text/javascript' src='https://docs.google.com/static/forms/client/js/2531324726-formviewer_prd.js'></script>
