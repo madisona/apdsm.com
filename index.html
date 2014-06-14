@@ -11,7 +11,7 @@ title: AssistantPro | We Make it Our Business to Care About Yours
 
 
 
-<div class="row intro">
+<div class="row intro" ng-app="myApp">
     <div class="col-md-4">
         <h2>AssistantPro, LLC.</h2>
         <p>AssistantPro, LLC. is designed to assist in the every day duties of the real estate transaction and help make life simpler for the Realtor. Fiduciary integrity and professional ethics are critical for our business and effective communication is key for making YOUR business grow.</p>
@@ -23,10 +23,38 @@ title: AssistantPro | We Make it Our Business to Care About Yours
         <a class="btn btn-default pull-left" href="{{ site.baseurl }}/services">Learn More &raquo;</a>
         <div class="clearfix"></div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4" ng-controller="TestimonialController">
         <h2>Testimonials</h2>
-        <p class="testimonial">"{{ site.data.testimonials[0].testimonial }}"</p>
-        <div class="testimonial-name">{{ site.data.testimonials[0].name }}</div>
-        <div class="testimonial-company">{{ site.data.testimonials[0].company }}</div>
+        <p class="testimonial">"{[{ testimonial.testimonial }]}"</p>
+        <div class="testimonial-name">{[{ testimonial.name }]}</div>
+        <div class="testimonial-company">{[{ testimonial.company }]}</div>
     </div>
 </div><!--end of row intro-->
+
+<script src="{{ site.baseurl }}/js/angular.min.js" type="application/javascript"></script>
+<script type="application/javascript">
+
+    var myApp = angular.module('myApp', []);
+    myApp.config([
+        '$interpolateProvider', function($interpolateProvider) {
+            return $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
+        }
+    ]);
+
+
+
+    function TestimonialController($scope, $http) {
+        $http.get('{{ site.baseurl }}/data/testimonials.json').success(function(data) {
+            $scope.testimonials = data;
+
+            $scope.testimonial = getRandomTestimonial();
+        });
+
+        function getRandomTestimonial() {
+            var items = $scope.testimonials;
+            return items[Math.floor(Math.random()*items.length)];
+        }
+
+    }
+    TestimonialController.$inject = ['$scope', '$http'];
+</script>
